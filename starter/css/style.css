@@ -48,11 +48,14 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -73,10 +76,12 @@ body {
 
   animation-name: moveInRight;
   animation-duration: 3s;
+  animation-timing-function: ease-out;
 
   /*
-  This will delay the animaltion before it starts
-  animation-delay: 3s;
+
+  animation-delay: 3s;   This will delay the animaltion before it starts
+  animation-iteration-count: 3; This will make the aniamtion repeat 3 times
   */
 }
 
@@ -103,4 +108,29 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
